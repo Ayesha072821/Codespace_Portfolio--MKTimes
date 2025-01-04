@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['quantity'])) {
     }
     
     // Redirect back to the cart page or wherever needed
-    header('Location: cart.php');
+    header('Location: ../cart.php');
     exit;
 }
 ?>

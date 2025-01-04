@@ -1,7 +1,7 @@
 <?php
 session_start();
-require "db_connection.php"; 
-include "header.html";
+require "includes/db_connection.php"; 
+include "includes/header.html";
 $email='';
 if ($_SERVER["REQUEST_METHOD"] == "POST")    //if method is post
  {
@@ -35,7 +35,7 @@ if (empty($error))
         $affected_rows=mysqli_affected_rows($link);
         if($affected_rows===0)
         {
-            echo $email;
+            
             echo 'Password change is not successful.Please try again.';
         }
         elseif($affected_rows>0)
@@ -50,7 +50,7 @@ if (empty($error))
                          if (mail($to_email, $subject, $body, $headers)) {
                              //if email is successfull make user aware of it
                              
-                             echo "<h5>Password Updated Sucessfully.</h5>";
+                             echo "<h5>Password Updated Sucessfully.Click the link to Log In.</h5>";
                              
                              
                                    echo' <a class="alert-link" href="login.php">Login</a>';

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "header.html";   //including the header file to display navbar for navigation
-require "db_connection.php"; 
+include "includes/header.html";   //including the header file to display navbar for navigation
+require "includes/db_connection.php"; 
 if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_SESSION['email_verification_code']))
 {
     $user_input=$_POST['verify_email'];

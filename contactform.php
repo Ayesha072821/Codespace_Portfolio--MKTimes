@@ -2,8 +2,8 @@
 //strating the seesion
 session_start();
 //including header file to display navigation bar and to databse connection
-include "header.html";
-require "db_connection.php";
+include "includes/header.html";
+require "includes/db_connection.php";
 
 
 
@@ -18,7 +18,7 @@ if(isset($_SESSION['userid']))
   
        
    // a welcome message is printed with the name of user stored in session variable
-   include "change_references.php";
+   include "includes/change_references.php";
 
 
 
@@ -108,6 +108,8 @@ if(isset($_SESSION['userid']))
                         // in this case an email is sent to mktimes account with subject as user email
                         $to_email = "mktime.watches@gmail.com";
                         $subject = $result['email'];
+                        # Close database connection.
+                        mysqli_close( $link) ;
                         //message from user will be sent as body
                         $body = $_POST['message'];
                         $headers = "From: ".  $subject;
@@ -130,5 +132,6 @@ if(isset($_SESSION['userid']))
  
 
 }
-include "footer.html";
+
+include "includes/footer.html";
 ?>

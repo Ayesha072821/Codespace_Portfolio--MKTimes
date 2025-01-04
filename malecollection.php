@@ -1,11 +1,11 @@
 <?php
 session_start();
-include "header.html";   //includes the navigation bar
-include "getmalewatches.php";   //this file fetches all watches with male category 
+include "includes/header.html";   //includes the navigation bar
+include "actions/getmalewatches.php";   //this file fetches all watches with male category 
 if(isset($_SESSION['userid']))
 {
    //if user have signed in change the buttons
-   include "change_references.php";
+   include "includes/change_references.php";
 
    //this variables store this string so when application goes to addcart page it bring user back here
     $_SESSION["from"]="malecollection";
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
                 </div>
 	            <ul class="list-group list-group-flush">
 	            <li class="list-group-item"><p class="text-center">&pound' . $item['item_price'] . '</p></li>
-	            <li class="list-group-item "><a class="btn btn-dark mx-auto d-block"   href="addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
+	            <li class="list-group-item "><a class="btn btn-dark mx-auto d-block"   href="actions/addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
 	            ADD to cart</a></li>
 	            </ul>
 	            </div>
@@ -118,5 +118,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
 </body>
 </html>
 <?php
-include "footer.html";
+include "includes/footer.html";
 ?>

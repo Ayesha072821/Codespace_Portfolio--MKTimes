@@ -1,5 +1,5 @@
 <?php
-require 'db_connection.php';
+require 'includes/db_connection.php';
 
 # Retrieve items from 'products' database table.
 	$q = "SELECT item_id,item_name,item_desc,item_price,item_img FROM products where item_category='Male'" ;

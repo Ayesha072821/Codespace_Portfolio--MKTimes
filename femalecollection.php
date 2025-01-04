@@ -1,13 +1,13 @@
 <?php
 session_start();    //starting the session
-include "header.html";      //inculding the navigation bar
-include "getfemalewatches.php";   //this file bring all female category watches from database
+include "includes/header.html";      //inculding the navigation bar
+include "actions/getfemalewatches.php";   //this file bring all female category watches from database
 if(isset($_SESSION['userid']))     //if user have logged in
 {
 
     // this script changes all the required buttons when user is signed in
 
-    include "change_references.php";
+    include "includes/change_references.php";
 
    
     //here the session variable store this string so that if user go to addtocart then this is used to return to thesame page.
@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
                 </div>
 	            <ul class="list-group list-group-flush">
 	            <li class="list-group-item"><p class="text-center">&pound' . $item['item_price'] . '</p></li>
-	            <li class="list-group-item"><a class="btn btn-dark mx-auto d-block"  href="addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
+	            <li class="list-group-item"><a class="btn btn-dark mx-auto d-block"  href="actions/addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
 	            ADD to cart</a></li>
 	            </ul>
 	            </div>
@@ -121,5 +121,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
 </body>
 </html>
 <?php
-include "footer.html";
+include "includes/footer.html";
 ?>

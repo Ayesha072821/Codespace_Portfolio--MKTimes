@@ -3,8 +3,8 @@
 session_start();
 
 //connection with database
-include "header.html";  //here the header file is included  here which will show the navbar
-require "db_connection.php";
+include "includes/header.html";  //here the header file is included  here which will show the navbar
+require "includes/db_connection.php";
 
 // after form submisiion check if method is post
 if ($_SERVER['REQUEST_METHOD']==='POST')
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
                     
                     
                     <div class="col-md-6" style="border: 1px solid black;">
-                        <h5>LOG IN!</h5>
+                        <h5>Confirm Email</h5>
                         <!-- input box for email -->
 	 			        <label for="email">Email Address:</label>
 	 			        <input type="email" id="user_email" class="form-control" name="user_email" required=""></br>
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
                         
                         <!-- submit button -->
                          <div>
-     			        <input type="submit"  class="btn btn-dark">
+     			        <button type="submit"  class="btn btn-dark">Send Link</button>
                          
 </div>
                          <p class="error">

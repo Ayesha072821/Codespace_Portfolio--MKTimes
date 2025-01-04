@@ -1,14 +1,14 @@
 <?php
 session_start();
-include ("header.html");
-include ("db_connection.php");
+include ("includes/header.html");
+include ("includes/db_connection.php");
 if(isset($_SESSION['userid']))     //if user have logged in
 {
     
 
     $_SESSION['cartitems']=0;  
 
-    include "change_references.php";
+    include "includes/change_references.php";
 
 
 }

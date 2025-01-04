@@ -49,12 +49,12 @@ if(isset($_SESSION['from']))      // here i checked whether tthis variable is se
 {
     if($_SESSION['from']=="malecollection")    //if its set to malecollection header should direct back to male collection page
     {
-        header('Location:malecollection.php');
+        header('Location:../malecollection.php');
        exit();  //exit after the redirect
     }
     if($_SESSION['from']=="femalecollection")    //if its set to femalecollection header should direct back to female collection page
     {
-        header('Location:femalecollection.php');
+        header('Location:../femalecollection.php');
         exit();  //exit after the redirect
     }
 }

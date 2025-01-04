@@ -1,7 +1,7 @@
 <?php
 session_start();                         //starting session
-include "header.html";                  //including header for navigation within website
-require "db_connection.php";           //database connection file
+include "includes/header.html";                  //including header for navigation within website
+require "includes/db_connection.php";           //database connection file
 //seeing if session variable is set or not. if user have signed in it will be set
 if(isset($_SESSION['userid']))
 {
@@ -9,7 +9,7 @@ if(isset($_SESSION['userid']))
    //if user have signed in some changes are done in navigation bar
    //instead of login, logout  is shown and refernce of that element is changed to logout page
   // element to register is made invisible to the user when already signed in
-  include "change_references.php";
+  include "includes/change_references.php";
 
 
    //check if the cart variable have nothing in it
@@ -85,7 +85,7 @@ else{
         
         if(isset($_SESSION['userid']) and ($_SESSION['cartitems']>0))
         {
-        echo '<form id="cartchanges" action="updatecart.php" method="POST"></br></br>';   //this is the form if user wants to update the cart
+        echo '<form id="cartchanges" action="actions/updatecart.php" method="POST"></br></br>';   //this is the form if user wants to update the cart
                
         echo '<button class="btn btn-dark"type="submit" style="float:center;">Update Cart</button></br></br></br>';    //when user changes the products quantity this button us clicked to update cart.
         //this cart button goes to the update cart file and do some work there to update the cart.
@@ -118,7 +118,7 @@ else{
                    
                        <div class="col-sm-2 d-flex justify-content-center align-items-center">
                    
-                   <a class="btn btn-dark "  href="deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
+                   <a class="btn btn-dark "  href="actions/deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
 
                     </div></br>';
            }

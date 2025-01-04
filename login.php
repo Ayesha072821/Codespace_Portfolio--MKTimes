@@ -3,7 +3,7 @@
 session_start();
 
 //connection with database
-require "db_connection.php";
+require "includes/db_connection.php";
 
 // after form submisiion check if method is post
 if ($_SERVER['REQUEST_METHOD']==='POST')
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
     mysqli_close($link);  //link to database is closed here
 
 }
-include "header.html";  //here the header file is included  here which will show the navbar
+include "includes/header.html";  //here the header file is included  here which will show the navbar
 
 ?>
 <!DOCTYPE html>
@@ -127,5 +127,5 @@ include "header.html";  //here the header file is included  here which will show
 </html>
 
 <?php
-include "footer.html"     //here footer file is included
+include "includes/footer.html"     //here footer file is included
 ?>

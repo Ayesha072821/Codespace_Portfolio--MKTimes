@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "header.html";   //including the header file to display navbar for navigation
-require "db_connection.php";    //including database connection file
+//include "includes/header.html";   //including the header file to display navbar for navigation
+require "includes/db_connection.php";    //including database connection file
 $_SESSION['email']='';
 $error=array();
 
@@ -48,7 +48,7 @@ if(isset($_GET['email']))
     </head>
     <body></br></br></br>
                 
-        <form id="resetpassword" action="resetlogic.php" method="POST" >
+        <form id="resetpassword" action="actions/resetlogic.php" method="POST" >
             <div class="container">
                 <div class="row">
                     

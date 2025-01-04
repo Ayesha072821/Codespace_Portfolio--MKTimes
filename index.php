@@ -2,8 +2,8 @@
 //strating the seesion
 session_start();
 //including header file to display navigation bar and to databse connection
-include "header.html";
-require "db_connection.php";
+include "includes/header.html";
+require "includes/db_connection.php";
 //seeing if session variable is set or not. if user have signed in it will be set
 if(isset($_SESSION['userid']))
 {
@@ -14,7 +14,7 @@ if(isset($_SESSION['userid']))
   
        
     
-include "change_references.php";
+include "includes/change_references.php";
 
 }
 
@@ -90,5 +90,5 @@ forhim.innerHTML="View Male Collection";
 </script>';
 }
 
-include "footer.html";
+include "includes/footer.html";
 ?>

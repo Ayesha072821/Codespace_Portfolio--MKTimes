@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "header.html";   //including the header file to display navbar for navigation
-require "db_connection.php";    //including database connection file
+include "includes/header.html";   //including the header file to display navbar for navigation
+require "includes/db_connection.php";    //including database connection file
 if ($_SERVER["REQUEST_METHOD"] == "POST")    //if method is post
  {
     
@@ -260,6 +260,6 @@ mysqli_close($link);
 </html>
 <?php
 
-include "footer.html";
+include "includes/footer.html";
 
 ?>

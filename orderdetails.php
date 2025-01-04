@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "header.html";
-require "db_connection.php";
+include "includes/header.html";
+require "includes/db_connection.php";
 
 if(isset($_SESSION['userid']))
 {
@@ -10,7 +10,7 @@ if(isset($_SESSION['userid']))
    //instead of login, logout  is shown and refernce of that element is changed to logout page
   // element to register is made invisible to the user when already signed in
   
-  include "change_references.php";
+  include "includes/change_references.php";
     
 
    
