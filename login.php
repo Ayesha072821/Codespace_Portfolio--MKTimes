@@ -85,7 +85,7 @@ include "includes/header.html";  //here the header file is included  here which 
     </head>
     <body></br></br></br>
                 
-        <form id="registrationform" action="login.php" method="POST" >
+        <form id="loginform" action="login.php" method="POST" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -106,7 +106,7 @@ include "includes/header.html";  //here the header file is included  here which 
                         <!-- submit button -->
                          <div>
      			        <input type="submit"  class="btn btn-dark">
-                         <a class="alert-link" href="forgotpassword.php" style="float:right">Forgot Password</a>';
+                         <a class="alert-link" href="forgotpassword.php" style="float:right">Forgot Password</a>
 </div>
                          <p class="error">
                     <?php 

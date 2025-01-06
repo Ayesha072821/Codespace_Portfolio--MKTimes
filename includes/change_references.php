@@ -36,6 +36,9 @@ herinheader.setAttribute("href","femalecollection.php");
 const himinheader=document.getElementById("himfromheader");
 himinheader.setAttribute("href","malecollection.php");
 
+
+
+
 const cart=document.getElementById("cart");
 cart.setAttribute("href","cart.php");
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "includes/header.html";   //includes the navigation bar
-include "actions/getmalewatches.php";   //this file fetches all watches with male category 
+include "getmalewatches.php";   //this file fetches all watches with male category 
 if(isset($_SESSION['userid']))
 {
    //if user have signed in change the buttons
@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
+<title>MKTimes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
@@ -103,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
                 </div>
 	            <ul class="list-group list-group-flush">
 	            <li class="list-group-item"><p class="text-center">&pound' . $item['item_price'] . '</p></li>
-	            <li class="list-group-item "><a class="btn btn-dark mx-auto d-block"   href="actions/addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
+	            <li class="list-group-item "><a class="btn btn-dark mx-auto d-block"   href="addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
 	            ADD to cart</a></li>
 	            </ul>
 	            </div>

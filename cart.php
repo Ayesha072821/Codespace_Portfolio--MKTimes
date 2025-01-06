@@ -47,6 +47,7 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
+<title>MKTimes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
@@ -85,7 +86,7 @@ else{
         
         if(isset($_SESSION['userid']) and ($_SESSION['cartitems']>0))
         {
-        echo '<form id="cartchanges" action="actions/updatecart.php" method="POST"></br></br>';   //this is the form if user wants to update the cart
+        echo '<form id="cartchanges" action="updatecart.php" method="POST"></br></br>';   //this is the form if user wants to update the cart
                
         echo '<button class="btn btn-dark"type="submit" style="float:center;">Update Cart</button></br></br></br>';    //when user changes the products quantity this button us clicked to update cart.
         //this cart button goes to the update cart file and do some work there to update the cart.
@@ -118,7 +119,7 @@ else{
                    
                        <div class="col-sm-2 d-flex justify-content-center align-items-center">
                    
-                   <a class="btn btn-dark "  href="actions/deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
+                   <a class="btn btn-dark "  href="deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
 
                     </div></br>';
            }

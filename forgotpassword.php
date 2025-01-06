@@ -30,16 +30,15 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
             $encoded_email=base64_encode($e);
             $subject = "Password Reset Link";
             //message from user will be sent as body
-            $body = "http://localhost/finalprojectbootcamp/resetpassword.php?email=". urlencode($encoded_email);
+            $body = "http://localhost/Codespace_Portfolio--MKTimes--EC2284074/resetpassword.php?email=". urlencode($encoded_email);
             $headers = "From: mktime.watches@gmail.com";
             //try to send the email
             if (mail($to_email, $subject, $body, $headers)) {
             //if email is successfull make user aware of it
                              
-            echo "<h5>Link To reset password has been sent to you email. Click that to change your password. </h5>";
+            echo "</br></br><h5>Link To reset password has been sent to you email. Click that to change your password. </h5>";
             echo '';
-            echo '<h5>Go back to log in .</h5>
-            <a class="alert-link" href="login.php">LOGIN Page</a>';
+            
                     } 
             else{
             $errors[]="Failed to send verification email";
@@ -63,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>SIGN IN</title>
+        <title>MKTimes</title>
         <!-- Bootstrap CSS -->
        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

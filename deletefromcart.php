@@ -23,7 +23,7 @@ if (isset($_SESSION['cart'][$item_id])) {
     unset($_SESSION['item_price'][$item_id]);
     
     // user is redirected to the cart page where the updated data is displayed
-    header("Location: ../cart.php"); // Redirect to the cart page (or any other page)
+    header("Location:cart.php"); // Redirect to the cart page (or any other page)
     exit();  //exit after the redirect
 } else {
 

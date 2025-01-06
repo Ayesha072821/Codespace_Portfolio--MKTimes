@@ -65,7 +65,7 @@ $id=$_SESSION['userid'];     //store value of session variable in another variab
                        //try to send the email
                         if (mail($to_email, $subject, $body, $headers)) {
                             //if email is successfull make user aware of it
-                            echo "<h5>Order Confirmation Email have been sent to your Registered Email.</h5>";
+                            echo "</br></br><h5>Order Confirmation Email have been sent to your Registered Email.</h5></br></ br>";
                              } else {
                             // if not successful print an error message.
                           echo "<h5>Message sending failed to Your Account. You can still View Your order details on your MKTIMES account.</h5>";
@@ -77,8 +77,8 @@ $id=$_SESSION['userid'];     //store value of session variable in another variab
 
 
 
-echo "<h2>Thanks for your order.Your orderNumber is #".$order_id."</h2>"; 
-echo "<h5>Order Details</h5>"; 
+echo "<h2>Thanks for your order.Your orderNumber is #".$order_id."</h2></br></br>"; 
+echo "<h5>Order Details</h5></br></br>"; 
 //query to get the order items and their detailsd from database
 
 $q = "select products.item_img,products.item_name,order_contents.quantity,order_contents.price from order_contents right join products on order_contents.item_id=products.item_id where order_contents.order_id=".$order_id."";

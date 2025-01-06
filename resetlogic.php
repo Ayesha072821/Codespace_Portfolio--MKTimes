@@ -29,6 +29,7 @@ if (empty($error))
     $email=$_SESSION['email'];
     $q="UPDATE users set pass='$p' WHERE email='$email'";
     $r=@mysqli_query($link,$q);
+    
 
     if($r)
     {
@@ -36,7 +37,7 @@ if (empty($error))
         if($affected_rows===0)
         {
             
-            echo 'Password change is not successful.Please try again.';
+            echo 'Email address do not Exist.Please try again.';
         }
         elseif($affected_rows>0)
         {
@@ -50,10 +51,10 @@ if (empty($error))
                          if (mail($to_email, $subject, $body, $headers)) {
                              //if email is successfull make user aware of it
                              
-                             echo "<h5>Password Updated Sucessfully.Click the link to Log In.</h5>";
+                             echo "</br></br><h5>Password Updated Sucessfully.Click the link to Log In.</h5>";
                              
                              
-                                   echo' <a class="alert-link" href="login.php">Login</a>';
+                                   echo'</br></br> <a class="alert-link" href="login.php">Login</a>';
                               } 
                             else{
                                 $errors[]="Failed to update password";
