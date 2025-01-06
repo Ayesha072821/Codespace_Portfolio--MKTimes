@@ -108,7 +108,7 @@ if(isset($_SESSION['userid']))
 	
 	        else
 	        {
-	            echo 'NO Orders to display';
+	            echo '<h5>NO Orders to display<h5>';
 	        }
         }
            
