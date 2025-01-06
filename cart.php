@@ -15,7 +15,7 @@ if(isset($_SESSION['userid']))
    //check if the cart variable have nothing in it
 if(empty($_SESSION['cart']))
 {
-    echo '<h2>There are no items in cart.</h2>';      //show user that there is nothing in cart
+    echo '</br></br><h2>There are no items in cart.</h2>';      //show user that there is nothing in cart
 
 }
 
