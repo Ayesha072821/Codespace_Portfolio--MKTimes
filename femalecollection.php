@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sort_option'])) {
                 </div>
 	            <ul class="list-group list-group-flush">
 	            <li class="list-group-item"><p class="text-center">&pound' . $item['item_price'] . '</p></li>
-	            <li class="list-group-item"><a class="btn btn-dark mx-auto d-block"  href="addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
+	            <li class="list-group-item"><a class="btn btn-dark mx-auto d-block" id='.$item['item_id'].' href="addtocart.php?id='.$item['item_id'].'&price='.$item['item_price'].'">
 	            ADD to cart</a></li>
 	            </ul>
 	            </div>

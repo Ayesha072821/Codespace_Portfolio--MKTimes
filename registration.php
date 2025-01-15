@@ -17,7 +17,7 @@ include "includes/header.html";   //including the header file to display navbar 
        <style>
         
         .error { color: red;
-        display:block; }
+         }
         
         
     

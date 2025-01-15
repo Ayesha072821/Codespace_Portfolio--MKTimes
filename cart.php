@@ -15,7 +15,7 @@ if(isset($_SESSION['userid']))
    //check if the cart variable have nothing in it
 if(empty($_SESSION['cart']))
 {
-    echo '</br></br><h2>There are no items in cart.</h2>';      //show user that there is nothing in cart
+    echo '</br></br><h2 id="empty_cart">There are no items in cart.</h2>';      //show user that there is nothing in cart
 
 }
 
@@ -88,7 +88,7 @@ else{
         {
         echo '<form id="cartchanges" action="updatecart.php" method="POST"></br></br>';   //this is the form if user wants to update the cart
                
-        echo '<button class="btn btn-dark"type="submit" style="float:center;">Update Cart</button></br></br></br>';    //when user changes the products quantity this button us clicked to update cart.
+        echo '<button class="btn btn-dark"type="submit" id="update_cart" style="float:center;">Update Cart</button></br></br></br>';    //when user changes the products quantity this button us clicked to update cart.
         //this cart button goes to the update cart file and do some work there to update the cart.
 
 
@@ -119,7 +119,7 @@ else{
                    
                        <div class="col-sm-2 d-flex justify-content-center align-items-center">
                    
-                   <a class="btn btn-dark "  href="deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
+                   <a class="btn btn-dark " id='.$row['item_id'].' href="deletefromcart.php?id='.$row['item_id'].'">Remove Item(s)</a></div>
 
                     </div></br>';
            }
@@ -134,7 +134,7 @@ else{
 
            echo '<h4 style="float:right; border:3px solid black;">Subtotal : '.$_SESSION['subtotal'].'</h4></br></br>';
            
-           echo '<a class="btn btn-dark"type="submit" style="float:right;" href="checkout.php">Check Out';
+           echo '<a class="btn btn-dark"type="submit" id ="checkout" style="float:right;" href="checkout.php">Check Out';
            
         }
         
