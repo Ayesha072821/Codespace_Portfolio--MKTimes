@@ -106,7 +106,7 @@ include "includes/header.html";  //here the header file is included  here which 
                         <!-- submit button -->
                          <div>
      			        <input type="submit" id="log_in" class="btn btn-dark">
-                         <a class="alert-link" href="forgotpassword.php" style="float:right">Forgot Password</a>
+                         <a class="alert-link" id="forgot_password" href="forgotpassword.php" style="float:right">Forgot Password</a>
 </div>
                          <p class="error" id='login_err'>
                     <?php 

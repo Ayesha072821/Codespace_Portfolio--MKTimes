@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
             if (mail($to_email, $subject, $body, $headers)) {
             //if email is successfull make user aware of it
                              
-            echo "</br></br><h5>Link To reset password has been sent to you email. Click that to change your password. </h5>";
+            echo "</br></br><h5 id='reset'>Link To reset password has been sent to you email. Click that to change your password. </h5>";
             echo '';
             
                     } 
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
                         
                         <!-- submit button -->
                          <div>
-     			        <button type="submit"  class="btn btn-dark">Send Link</button>
+     			        <button type="submit" id="pass_change" class="btn btn-dark">Send Link</button>
                          
 </div>
                          <p class="error">

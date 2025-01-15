@@ -51,10 +51,10 @@ if (empty($error))
                          if (mail($to_email, $subject, $body, $headers)) {
                              //if email is successfull make user aware of it
                              
-                             echo "</br></br><h5>Password Updated Sucessfully.Click the link to Log In.</h5>";
+                             echo "</br></br><h5 id='update'>Password Updated Sucessfully.Click the link to Log In.</h5>";
                              
                              
-                                   echo'</br></br> <a class="alert-link" href="login.php">Login</a>';
+                                   echo'</br></br> <a class="alert-link" id="log" href="login.php">Login</a>';
                               } 
                             else{
                                 $errors[]="Failed to update password";

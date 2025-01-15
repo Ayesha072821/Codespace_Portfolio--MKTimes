@@ -67,7 +67,7 @@ if(isset($_GET['email']))
                         
                         <!-- submit button -->
                          <div>
-     			        <input type="submit"  class="btn btn-dark">
+     			        <input type="submit" id="reset" class="btn btn-dark">
                          
 </div>
                          <p class="error" id="error">
