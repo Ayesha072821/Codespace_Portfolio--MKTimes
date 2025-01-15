@@ -40,7 +40,7 @@ require "includes/db_connection.php";
                         
                         
                         <!-- submit button -->
-     			        <input type="submit"  class="btn btn-dark"></br></br>
+     			        <input type="submit" id="verify_email_button"  class="btn btn-dark"></br></br>
 
                          <p class="error">
                     <?php 

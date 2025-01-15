@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_SESSION['email_verification_cod
 
         if ($r) {
             echo "</br></br><h5>Verification complete. You are now registered!</h5>";
-            echo '</br></br><a class="alert-link" href="login.php">LOG IN</a>';
+            echo '</br></br><a class="alert-link" id="log" href="login.php">LOG IN</a>';
             unset($_SESSION['email_verification_code']);
             unset($_SESSION['user_data']);
             session_destroy();

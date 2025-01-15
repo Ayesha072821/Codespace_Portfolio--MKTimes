@@ -91,7 +91,7 @@ if (empty($errors))
                              echo "</br></br><h5>Verification email sent. Please check your inbox.</h5>";
                              echo '';
                              echo '</br></br><h5>Click on the link to verify Your email.</h5>
-                                  </br></br>  <a class="alert-link" href="verify_email.php">Verify Email</a>';
+                                  </br></br>  <a class="alert-link" id="verify_email" href="verify_email.php">Verify Email</a>';
                               } 
                             else{
                                 $errors[]="Failed to send verification email";
@@ -116,9 +116,12 @@ if(!empty($errors))
     echo '<h4 class="alert-heading" id="err_msg">The Following error(s) occurred.</h4>';
     foreach($errors as $msg)
     {
-        echo "-$msg<br>";
+        echo "$msg<br>";
     }
-    echo '<p>Please Try Again.</p>';
+    echo '<script>
+    const reg=document.getElementById("err_msg");
+    reg.innerHTML="Please try Again";
+    </script>';
 
 }
 
@@ -128,3 +131,28 @@ mysqli_close($link);
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Registration Form</title>
+        <!-- Bootstrap CSS -->
+       <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ 
+       <style>
+        
+        .error { color: red;
+         }
+         </style>
+
+        </head>
+        <body>
+
+        <p id="err_msg"></p>
+        </body>
+        </html>

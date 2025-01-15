@@ -16,7 +16,8 @@ include "includes/header.html";   //including the header file to display navbar 
  
        <style>
         
-        .error { color: red; }
+        .error { color: red;
+        display:block; }
         
         
     
@@ -68,7 +69,7 @@ include "includes/header.html";   //including the header file to display navbar 
 	 			        <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" required=""></br>
 
                         <!-- submit button -->
-     			        <input type="submit"  id="register" class="btn btn-dark"></br></br>
+     			        <input type="submit"  id="registeruser" class="btn btn-dark"></br></br>
                          <p id="error" class="error"></p>
                     </div>
                 </div>
@@ -103,7 +104,7 @@ include "includes/header.html";   //including the header file to display navbar 
                 {
                     event.preventDefault()
 
-                    errormessage.innerHTML="You should be 16 and older to register yourself";
+                    errormessage.textContent="You should be 16 and older to register yourself";
                     return;
                 } 
                 
