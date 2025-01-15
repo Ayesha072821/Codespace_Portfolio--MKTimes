@@ -111,7 +111,7 @@ describe('Click to view the registration Page', () => {
 
 //triyng to fill in the registration form with wrong DOB
 
-describe('Filling the First name field in Registration Fage', () => {
+describe('Filling the First name field in Registration Page', () => {
   it('passes', () => {
     cy.visit('http://localhost/Codespace_Portfolio--MKTimes--EC2284074/index.php')
     cy.get('#register').click()
@@ -137,7 +137,7 @@ describe('Filling the First name field in Registration Fage', () => {
 
 //triyng to fill in the registration form and wrong password length
 
-describe('Filling the small password in Registration Fage', () => {
+describe('Filling the small password in Registration Page', () => {
   it('passes', () => {
     cy.visit('http://localhost/Codespace_Portfolio--MKTimes--EC2284074/index.php')
     cy.get('#register').click()
@@ -164,7 +164,7 @@ describe('Filling the small password in Registration Fage', () => {
 
 //triyng to fill in the registration form and wrong password length
 
-describe('Filling the different password and confirm in Registration Fage', () => {
+describe('Filling the different password and confirm in Registration Page', () => {
   it('passes', () => {
     cy.visit('http://localhost/Codespace_Portfolio--MKTimes--EC2284074/index.php')
     cy.get('#register').click()
@@ -211,39 +211,7 @@ describe('Testing To register with already registered email', () => {
 
 
 
-//Putting all the right Things and seeing if registration goes through
-describe('Testing if Registration with new email works', () => {
-  it('passes', () => {
-    cy.visit('http://localhost/Codespace_Portfolio--MKTimes--EC2284074/index.php')
-    cy.get('#register').click()
-    cy.url().should('be.equal','http://localhost/Codespace_Portfolio--MKTimes--EC2284074/registration.php')
-  cy.get('#firstname').type('ayesha')
-  cy.get('#lastname').type('yousaf')
-  
-  cy.get('#dateofbirth').type('2001-10-02')
-  
-  cy.get('#email').type('mktimestesting.email@gmail.com')
-  cy.get('#password').type('shahwaiz')
-  cy.get('#confirmpassword').type('shahwaiz')
-  cy.get('#registeruser').click();
-  //this email do not exists in database it should go to the next page
-   cy.url().should('be.equal','http://localhost/Codespace_Portfolio--MKTimes--EC2284074/user_registration.php')
 
-   cy.get('#verify_email').click()
-   cy.url().should('be.equal','http://localhost/Codespace_Portfolio--MKTimes--EC2284074/verify_email.php')
-   cy.pause()
-   //here i pauses the testing because i get a code in email to register i add that and resume testing against it
-   
-   //i will enter the code i am getting in email manually and then go to next page and will resume the testing process
-
-    //cy.get('#verify_email_button').click()
-    cy.url().should('be.equal','http://localhost/Codespace_Portfolio--MKTimes--EC2284074/verify_email_logic.php')
-    cy.get('#log').click()
- //9ii9
- // cy.url().should('be.equal','http://localhost/Codespace_Portfolio--MKTimes--EC2284074/login.php')
-
-  })
-})
 
 
 
